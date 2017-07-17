@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:Arial, Helvetica, sans-serif; font-size:16px;}
+
+th, tr, td {
+    border: 1px solid black;
+	padding:5px;
+}
+
+table {
+    width: 100%;
+	border:1px solid black;
+}
+
+th {
+    height: 50px;
+	text-align:center;
+	background-color:#6CF;	
+}
+
+td {
+	text-align:center;
+	height:50px;
+	vertical-align:bottom;
+}
+
+tr:hover{
+	background-color:#3CF;
+	}
+tr:nth-child(odd){
+	background-color:#CCC;
+	}
+.navi-right{margin-right:10px;}
+.navi-left{ margin-left:10px;}
+
+ul.topnavigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position:fixed;
+  width:100%;
+}
+
+ul.topnavigation li {float: left;}
+
+ul.topnavigation li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform:uppercase;
+}
+
+ul.topnavigation li a:hover {background-color: #ddd;color:black;}
+ul.topnavigation li a:visited {background-color:#dd; color:white}
+ul.topnavigation li a:active {background-color:#F00; color:white}
+
+ul.topnavigation li.icon {display: none;}
+
+#contents {
+	padding: 1em 3em 1em 3em;
+    min-height: 580px;
+}
+
+@media screen and (max-width:680px) {
+  ul.topnavigation li:not(:first-child) {display: none;}
+  ul.topnavigation li.icon {
+    float: right;
+    display: inline-block;
+  }
+
+}
+
+@media screen and (max-width: 680px) {
+	#contents {padding: 1em 2em;
+    min-height: 580px;
+	}
+}
+
+@media screen and (max-width:680px) {
+  ul.topnavigation.responsive {position: relative;}
+  ul.topnavigation.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnavigation.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnavigation.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
